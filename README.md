@@ -3,6 +3,7 @@
 Quick demonstration of how we might set up node connections/RPC in exunit.
 
 ```
+> git clone git@github.com:dylanfareed/connection.git
 > cd connection
 > epmd -daemon
 > mix deps.get
@@ -10,5 +11,5 @@ Quick demonstration of how we might set up node connections/RPC in exunit.
 .
 
 Finished in 0.7 seconds
-1 test, 0 failures
+3 tests, 0 failures
 ```

@@ -3,7 +3,7 @@ defmodule Cluster do
 
   use GenServer
 
-  @timeout 30_000
+  @timeout 5_000
   @master "caller"
   @slave "receiver"
   @host "127.0.0.1"
@@ -82,5 +82,5 @@ defmodule Cluster do
     |> String.to_atom()
   end
 
-  defp random_member(), do: Node.list() |> List.first
+  defp random_member(), do: Node.list() |> Enum.random
 end
