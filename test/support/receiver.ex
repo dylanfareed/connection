@@ -3,7 +3,7 @@ defmodule Receiver do
     def list_nodes(), do: Node.list
 
     def ping() do
-      "Hello from #{Node.self}"
+      ":pong from #{Node.self}"
     end
   end
 end

@@ -12,7 +12,7 @@ defmodule ConnectionTest do
     assert Receiver.Service.list_nodes() == [:"receiver1@127.0.0.1"]
     assert GenServer.call(Cluster, :list_nodes) == [:"caller@127.0.0.1"]
 
-    assert Receiver.Service.ping() == "Hello from caller@127.0.0.1"
-    assert GenServer.call(Cluster, :ping) == "Hello from receiver1@127.0.0.1"
+    assert Receiver.Service.ping() == ":pong from caller@127.0.0.1"
+    assert GenServer.call(Cluster, :ping) == ":pong from receiver1@127.0.0.1"
   end
 end
